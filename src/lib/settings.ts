@@ -3,8 +3,6 @@ export interface AppSettings {
   openRouterModel: string;
   supabaseUrl: string;
   supabaseAnonKey: string;
-  sessionId: string;
-  playerId: string;
 }
 
 export const defaultSettings: AppSettings = {
@@ -12,8 +10,6 @@ export const defaultSettings: AppSettings = {
   openRouterModel: 'mimo/mimo-v2.5',
   supabaseUrl: import.meta.env.VITE_SUPABASE_URL ?? '',
   supabaseAnonKey: import.meta.env.VITE_SUPABASE_ANON_KEY ?? '',
-  sessionId: '',
-  playerId: '',
 };
 
 const storageKey = 'multiplayer-rp-ai:settings';
@@ -34,5 +30,5 @@ export function saveSettings(settings: AppSettings): void {
 }
 
 export function hasRuntimeConfiguration(settings: AppSettings): boolean {
-  return Boolean(settings.openRouterApiKey && settings.supabaseUrl && settings.supabaseAnonKey && settings.sessionId && settings.playerId);
+  return Boolean(settings.openRouterApiKey && settings.supabaseUrl && settings.supabaseAnonKey);
 }
