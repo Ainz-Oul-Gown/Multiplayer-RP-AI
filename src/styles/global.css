@@ -1,0 +1,4 @@
+:root { color: #e5e7eb; background: #030712; font-family: Inter, system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
